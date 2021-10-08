@@ -4,6 +4,8 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
+import Auth from './pages/Auth'
+import Home from './pages/Home'
 
 const App = () => {
   return (
@@ -11,10 +13,10 @@ const App = () => {
       <div>
         <Switch>
           <Route exact path='/'>
-
+            <Home />
           </Route>
           <Route path='/signIn'>
-
+            <Auth />
           </Route>
         </Switch>
       </div>
