@@ -1,9 +1,17 @@
 import ListGroupItem from 'react-bootstrap/ListGroupItem'
 
-const ItemElem = () => {
+const ItemElem = ({
+  id,
+  text,
+  isDone,
+  handleIsDone
+}) => {
   return (
-    <ListGroupItem action variant="secondary">
-      Secondary
+    <ListGroupItem 
+      action 
+      variant={isDone ? "success" : "secondary"}
+      onClick={() => handleIsDone(id, !isDone)} >
+      {text}
     </ListGroupItem>
   )
 }
